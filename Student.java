@@ -1,19 +1,19 @@
-class Student {
-
-    public void avgMarks(int s1, int s2) {
-        double avg = (s1 + s2) / 2.0;
-        System.out.println(avg);
+import java.util.*;
+class Student{
+    String name;
+    int age;
+    Student(String name, int age){
+        this.name=name;
+        this.age=age;
     }
-
-    public void avgMarks(int s1, int s2, int s3) {
-        double avg = (s1 + s2 + s3) / 3.0;
-        System.out.println(avg);
+    void display(){
+        System.out.println("Name:" +name);
+        System.out.println("Age:" +age);
     }
-
-    public static void main(String args[]) {
-        Student s = new Student();
-
-        s.avgMarks(70, 92);
-        s.avgMarks(91, 95, 96);
+    public static void main(String[]args){
+        Student s1=new Student("John",18);
+        Student s2=new Student("Mary",19);
+        s1.display();
+        s2.display();
     }
 }
